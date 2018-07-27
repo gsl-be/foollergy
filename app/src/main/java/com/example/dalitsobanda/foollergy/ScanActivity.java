@@ -18,7 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.dalitsobanda.foollery.ui.CameraSourcePreview;
+import com.example.dalitsobanda.foollergy.ui.CameraSourcePreview;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.vision.CameraSource;
@@ -27,7 +27,7 @@ import com.google.android.gms.vision.text.TextRecognizer;
 import java.io.IOException;
 
 
-public class scan extends AppCompatActivity {
+public class ScanActivity extends AppCompatActivity {
 
     private static  final String TAG="scan_activity";
     // Intent request code to handle updating play services if needed.
@@ -46,8 +46,6 @@ public class scan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         preview = (CameraSourcePreview) findViewById(R.id.preview);
 
@@ -61,6 +59,7 @@ public class scan extends AppCompatActivity {
             createCameraSource(autoFocus);
         } else {
             requestCameraPermission();
+            createCameraSource(autoFocus);
         }
 
     }

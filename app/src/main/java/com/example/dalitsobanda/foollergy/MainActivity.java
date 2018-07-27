@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent startScan = new Intent(MainActivity.this, scan.class);
+                Intent startScan = new Intent(MainActivity.this, ScanActivity.class);
                 startActivityForResult(startScan, 0);
             }
         });
