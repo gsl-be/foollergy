@@ -102,6 +102,9 @@ public class ScanActivity extends AppCompatActivity {
             Log.w(TAG, "Detector dependencies are not yet available.");
             Toast.makeText(this, "not yet operational", Toast.LENGTH_LONG).show();
         }
+        else{
+            Toast.makeText(this, "text recognizer is operational", Toast.LENGTH_LONG).show();
+        }
 
         // TODO: Create the mCameraSource using the TextRecognizer.
 
